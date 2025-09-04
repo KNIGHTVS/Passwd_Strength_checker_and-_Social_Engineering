@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password & Social Engineering Risk Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 Password & Social Engineering Risk Analyzer</h1>
+
+    <div class="tab">
+      <button onclick="openTab('strength')">Password Strength</button>
+      <button onclick="openTab('social')">Social Engineering Risk</button>
+    </div>
+
+    <!-- Password Strength Tab -->
+    <div id="strength" class="tab-content">
+      <h2>Check Password Strength</h2>
+      <input type="password" id="passwordStrength" placeholder="Enter your password">
+      <button onclick="checkStrength()">Check</button>
+      <p id="strengthResult"></p>
+
+      <div class="examples">
+        <h3>🔑 Example Passwords</h3>
+        <p><b>Weak:</b> password123</p>
+        <p><b>Medium:</b> hello2023</p>
+        <p><b>Strong:</b> V!vek_2002@</p>
+      </div>
+    </div>
+
+    <!-- Social Engineering Tab -->
+    <div id="social" class="tab-content" style="display:none;">
+      <h2>Social Engineering Risk</h2>
+
+      <input type="text" id="name" placeholder="Your Name"><br>
+      <input type="text" id="dob" placeholder="Birth Year (e.g., 2002)"><br>
+      <input type="text" id="phone" placeholder="Phone Number"><br>
+      <input type="text" id="pet" placeholder="Pet’s Name"><br>
+      <input type="text" id="hobby" placeholder="Hobby"><br>
+
+      <input type="password" id="passwordRisk" placeholder="Enter your password"><br>
+      <button onclick="checkSocialEngineering()">Analyze</button>
+
+      <p id="riskResult"></p>
+      <p id="strengthCheck"></p>
+      <p id="threatVector"></p>
+      <p id="awarenessTip"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
